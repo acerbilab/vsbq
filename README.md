@@ -12,3 +12,6 @@ pip install -e ./pyvbmc
 python -m ipykernel install --user --name vsbq 
 ```
 
+## Example
+
+See the [example notebook](./example.ipynb) for a simple example of using VSBQ.
