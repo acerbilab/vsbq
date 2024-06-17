@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - override /task: noisy_timing_st
+  - override /algorithm: vsbq_paper
+
+algorithm:
+  initial_set:
+    json_dir: ./initial_points/${task_name}_std:${task.options.noise_sd}/${algorithm.init_source}
+    id: 0
+  budget: "3000*D"
+  init_source: CMA-ES
+seed: 0
+
+task:
+  options:
+    noise_sd: 3

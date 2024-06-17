@@ -1,0 +1,11 @@
+# @package _global_
+
+algorithm:
+  method: CMA-ES
+  data_save_path: ./initial_points/${task_name}_std:${task.options.noise_sd}/${algorithm.method}/budget:${algorithm.map_optimization.N_fun_evals}/${seed}/initial_train_set.pkl
+
+hydra:
+  sweeper:
+    params:
+      algorithm.map_optimization.N_fun_evals: 5000
+      seed: range(0,10)

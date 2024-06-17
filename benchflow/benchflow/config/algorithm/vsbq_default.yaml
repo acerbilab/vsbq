@@ -1,0 +1,20 @@
+class: VSBQ # should correspond to a benchflow.algorithms Class
+args: [
+    task.log_joint, # log-target
+  ]
+seed: 0
+kwargs:
+  x0: task.x0() # initial point
+  lower_bounds: task.lb # lower bounds
+  upper_bounds: task.ub # upper bounds
+  plausible_lower_bounds: task.plb # plausible LB
+  plausible_upper_bounds: task.pub # plausible UB
+  user_options:
+    noiseshaping: true
+    noiseshapingfactors: 0.05
+    noiseshapingthresholds: 10
+    kstart: 50
+    num_ips: "100*D"
+    plot: True
+init_keep_factor: 20
+cross_validate: False

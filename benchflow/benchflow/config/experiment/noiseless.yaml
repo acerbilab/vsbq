@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - override /task: bimodal
+  - override /algorithm: vsbq_paper
+
+algorithm:
+  initial_set:
+    json_dir: ./initial_points/${task_name}/${algorithm.init_source}
+    id: 0
+  budget: "3000*D"
+  init_source: CMA-ES
+seed: 0

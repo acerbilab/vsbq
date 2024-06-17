@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - /experiment/initial_set: multi_banana_MAP
+  - override /algorithm: generate_initial_set

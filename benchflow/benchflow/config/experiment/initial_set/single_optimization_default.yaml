@@ -1,0 +1,14 @@
+# @package _global_
+
+algorithm:
+  method: CMA-ES
+  data_save_path: ./initial_points/${task_name}/${algorithm.method}/traces/${seed}/initial_train_set.pkl
+  # data_save_path: ./initial_points/${task_name}/${algorithm.method}/traces,orig_MAP=${algorithm.map_optimization.original_space}/${seed}/initial_train_set.pkl
+  map_optimization:
+    stop_after_first: True
+    N_fun_evals: 100000
+
+hydra:
+  sweeper:
+    params:
+      seed: range(0,20)

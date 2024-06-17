@@ -1,0 +1,14 @@
+class: NNRegression # should correspond to a benchflow.algorithms Class
+kwargs:
+  user_options:
+    noiseshaping: true
+    noiseshapingfactors: 0.05
+    noiseshapingthresholds: 10
+    kstart: 50
+    num_ips: "100*D"
+    plot: True
+    skipelbovariance: true  # skip ELBO variance computation since not available for NNRegression
+init_keep_factor: 20
+cross_validate: False
+posterior_sampling: SVI
+additional_svi_iters: 0

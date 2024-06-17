@@ -1,0 +1,24 @@
+# @package _global_
+# requires hydra-submitit-launcher (available via pip)
+
+defaults:
+  - override /hydra/launcher: submitit_slurm
+
+hydra:
+  launcher:
+    partition: gpu
+    cpus_per_task: 1
+    gpus_per_task: 1
+    mem_per_cpu: 16G
+    timeout_min: 240
+    gres: gpu:1
+    array_parallelism: 4 # max num of tasks to run in parallel (via job array)
+    additional_parameters:
+      clusters: ukko
+      error: /dev/null
+      output: /dev/null
+      begin: now+10
+      # nodelist: ukko3-g601
+    setup:
+      - "export TQDM_MININTERVAL=10"
+      - "module load cuDNN/8.6.0.163-CUDA-11.8.0"

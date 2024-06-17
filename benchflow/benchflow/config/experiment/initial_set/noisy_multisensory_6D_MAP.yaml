@@ -1,0 +1,11 @@
+# @package _global_
+
+defaults:
+  - noisy_single_optimization_default
+  - override /task: noisy_multisensory_6D
+
+hydra:
+  sweeper:
+    params:
+      task.options.noise_sd: range(1, 8, 1)
+      algorithm.method: PyBADS, CMA-ES

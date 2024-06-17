@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - noisy
+  - override /algorithm: nn_regression

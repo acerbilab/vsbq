@@ -1,0 +1,22 @@
+# @package _global_
+# requires hydra-submitit-launcher (available via pip)
+
+defaults:
+  - override /hydra/launcher: submitit_slurm
+
+hydra:
+  launcher:
+    partition: short
+    cpus_per_task: 1
+    mem_per_cpu: 16G
+    timeout_min: 120
+    additional_parameters:
+      # prevent some silently failed submissions since the default output (sub)folders specified in submitit is not created yet when submitting the sbatch job. The running processes' output/error info will still be recorded in the right places since srun overrides the output/error paths and when srun executes the folders are already created. Slurm should allow logging to non-existed folders after 23.02.
+      clusters: ukko
+      error: /dev/null
+      output: /dev/null
+      begin: now+10
+    setup:
+      - "export TQDM_MININTERVAL=10"
+      # - ". ~/.bash_aliases"
+    #   - "init_flow"

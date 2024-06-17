@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - /experiment/initial_set: multi_banana_MAP
+  - override /algorithm: generate_initial_set
+
+algorithm:
+  method: CMA-ES
+  data_save_path: ./LA_map/${task_name}/${algorithm.method}/traces/${seed}/initial_train_set.pkl
+  map_optimization:
+    stop_after_first: True
+    N_fun_evals: 100000
+    original_space: False
+  transform_to_unconstrained_coordinates: True
+
+hydra:
+  sweeper:
+    params:
+      seed: range(0,10)

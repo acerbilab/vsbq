@@ -1,0 +1,9 @@
+---
+name: noisy_timing_st
+file_name: timing
+classname: BayesianTiming
+noisy: True
+simulate_noise: True
+options:
+  noise_sd: 3
+  prior: SplineTrapezoidal

@@ -1,0 +1,10 @@
+# @package _global_
+
+defaults:
+  - single_optimization_default
+  - override /task: bimodal
+
+hydra:
+  sweeper:
+    params:
+      algorithm.method: CMA-ES, PyBADS

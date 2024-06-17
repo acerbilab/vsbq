@@ -1,0 +1,10 @@
+# @package _global_
+
+defaults:
+  - single_optimization_default
+  - override /task: multisensory_6D
+
+hydra:
+  sweeper:
+    params:
+      algorithm.method: PyBADS, CMA-ES

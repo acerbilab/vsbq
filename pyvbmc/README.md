@@ -1,0 +1,1 @@
+Variational Sparse Bayesian Quadrature is implemented based on [PyVBMC](https://github.com/acerbilab/pyvbmc) framework.

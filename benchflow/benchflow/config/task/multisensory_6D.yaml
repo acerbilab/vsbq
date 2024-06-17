@@ -1,0 +1,7 @@
+---
+name: multisensory_6D
+file_name: multisensory_6D
+classname: Multisensory_6D
+subject_id: 0
+options:
+  prior: SplineTrapezoidal

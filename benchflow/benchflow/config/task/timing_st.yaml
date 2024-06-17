@@ -1,0 +1,6 @@
+---
+name: timing_st
+file_name: timing
+classname: BayesianTiming
+options:
+  prior: SplineTrapezoidal

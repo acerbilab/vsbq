@@ -1,0 +1,47 @@
+# ides
+*.~undo-tree~
+.#*
+
+# Autosaves
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+*.egg-info/
+
+.vscode
+
+# Docs (built changes to be committed on gh-pages branch).
+docs/build/*
+
+# hydra run info
+outputs/
+multirun/
+
+# mcmc autosaves
+benchflow/reference_samples/*.h5
+*exps*/
+cache/
+*_bkp
+plots/
+.ipynb_checkpoints/
+build/
+backup/
+time_gp/
+slurm/
+laplace/
+.DS_Store
+figure*/
+_test.ipynb
+data/
+**/task_info/diamonds/*.so
+**/task_info/diamonds/*.hpp
+temp/
+logs/
+initial_points*/
+outcmaes/
+*_logs/
+*_debug/
+*.pkl
+oracle/
