@@ -15,3 +15,20 @@ python -m ipykernel install --user --name vsbq
 ## Example
 
 See the [example notebook](./example.ipynb) for a simple example of using VSBQ.
+
+## Citation
+Please cite our paper if you find this work useful:
+```
+@misc{liFastPostprocessBayesian2024,
+  title = {Fast Post-Process {{Bayesian}} Inference with {{Variational Sparse Bayesian Quadrature}}},
+  author = {Li, Chengkun and Clart{\'e}, Gr{\'e}goire and Jørgensen, Martin and Acerbi, Luigi},
+  year = {2024},
+  number = {arXiv:2303.05263},
+  eprint = {2303.05263},
+  primaryclass = {cs, stat},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2303.05263},
+  archiveprefix = {arxiv}
+}
+```
+

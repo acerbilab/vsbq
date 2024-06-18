@@ -29,6 +29,6 @@ setup(
         "scikit-learn",
         "tqdm",
         "ipywidgets",
-        "jaxgp @ git+ssh://git@github.com/pipme/JaxGP.git",
+        "jaxgp @ git+https://github.com/pipme/JaxGP.git",
     ],
 )
